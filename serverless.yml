@@ -1,0 +1,15 @@
+service: pdf-generator
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  httpApi:
+    cors: true
+
+functions:
+  generate-pdf:
+    handler: handler.generatePdf
+    events:
+      - httpApi:
+          path: /api/pdf
+          method: get  
