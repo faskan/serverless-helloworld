@@ -32,7 +32,6 @@ module.exports = {
 
   authorizerFunc: (event, context, callback) => {
     var token = event.authorizationToken;
-    console.log("TOKEN: " + token);
     switch (token) {
       case 'allow':
         callback(null, generatePolicy('user', 'Allow', event.methodArn));
