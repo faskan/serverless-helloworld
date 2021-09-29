@@ -10,6 +10,9 @@ functions:
   generate-pdf:
     handler: handler.generatePdf
     events:
-      - httpApi:
+      - http:
           path: /api/pdf
           method: get  
+          authorizer: authorizerFunc
+  authorizerFunc:
+    handler: handler.authorizerFunc
