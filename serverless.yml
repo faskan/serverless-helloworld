@@ -13,6 +13,5 @@ functions:
       - http:
           path: /api/pdf
           method: get  
-          authorizer: authorizerFunc
   authorizerFunc:
     handler: handler.authorizerFunc
